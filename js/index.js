@@ -30,12 +30,33 @@ pNodeList.forEach(function(pElement) {
 })
 
 const mainLogo = document.querySelector('h1.logo-heading')
-// console.log(mainLogo)
 mainLogo.addEventListener('dblclick', () => {
     mainLogo.innerText = 'DBL CLICKED'
 })
 
 
+// letsGoImage.addEventListener('contextmenu', (event) => {
+//     event.preventDefault()
+//     letsGoImage.hidden = true
+// })
 
+// const h2NodeList = document.querySelectorAll('h2')
+// h2NodeList.forEach(function(h2Element) {
+//     h2Element.addEventListener("select", () => {
+//         window.alert("selected")
+//     })
+// })
+
+let lastScrollPosition = 0;
+let letsGoSubtitle = document.querySelector('.content-section h2')
+
+window.addEventListener('scroll', function(event) {
+    lastScrollPosition = window.scrollY
+    if (lastScrollPosition != 0) {
+        letsGoSubtitle.innerText = 'Last Scroll Position: ' + lastScrollPosition
+    } else {
+        letsGoSubtitle.innerText = 'Let\'s Go!'
+    }
+})
 
 
