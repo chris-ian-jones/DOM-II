@@ -31,7 +31,11 @@ pNodeList.forEach(function(pElement) {
 
 const mainLogo = document.querySelector('h1.logo-heading')
 // console.log(mainLogo)
-mainLogo.addEventListener('click', () => {
-    mainLogo.innerText = 'CLICKED'
+mainLogo.addEventListener('dblclick', () => {
+    mainLogo.innerText = 'DBL CLICKED'
 })
+
+
+
+
 
