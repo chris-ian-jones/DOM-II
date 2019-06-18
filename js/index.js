@@ -59,4 +59,8 @@ window.addEventListener('scroll', function(event) {
     }
 })
 
-
+window.addEventListener('resize', function(event) {
+    pNodeList.forEach(function(pElement) {
+        pElement.style.color = 'purple'
+        })
+})
