@@ -11,7 +11,6 @@ heroPhoto.addEventListener('mouseout', () => {
 
 let letsGoImage = document.querySelectorAll('.img-content img')[0]
 let adventureAwaitsImage = document.querySelectorAll('.img-content img')[1]
-let containerHome = document.querySelector('.container .home')
 
 document.addEventListener('keydown', () => {
     letsGoImage.setAttribute('src', 'https://picsum.photos/id/1/400/300')
@@ -21,5 +20,12 @@ document.addEventListener('keydown', () => {
 document.addEventListener('keyup', () => {
     letsGoImage.setAttribute('src', 'img/adventure.jpg')
     adventureAwaitsImage.setAttribute('src', 'img/fun.jpg')
+})
+
+let pNodeList = document.querySelectorAll('p')
+pNodeList.forEach(function(pElement) {
+    pElement.addEventListener('copy', () => {
+        window.alert("No copying!");
+    })
 })
 
