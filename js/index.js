@@ -1,3 +1,6 @@
+//#1 'Mouseover' event listener
+//#2 'Mouseout' event listener
+
 // Update the img src for the hero photo when mouse overed
 const heroPhoto = document.querySelector('header img')
 heroPhoto.addEventListener('mouseover', () => {
@@ -6,6 +9,9 @@ heroPhoto.addEventListener('mouseover', () => {
 heroPhoto.addEventListener('mouseout', () => {
     heroPhoto.setAttribute('src', "img/fun-bus.jpg")
 })
+
+//#3 'Keydown' event listener
+//#4 'Keyup' event listener
 
 // Update the img src for two middle photos upon a key pressing down
 // Used .querySelectorAll to select the [nth] instance of that element to edit
@@ -21,6 +27,8 @@ document.addEventListener('keyup', () => {
     adventureAwaitsImage.setAttribute('src', 'img/fun.jpg')
 })
 
+//#5 'Copy' event listener
+
 // Defined variable for a NodeList of p elements
 const pNodeList = document.querySelectorAll('p')
 // Loop through NodeList and added a copy event listener to each p element
@@ -30,11 +38,15 @@ pNodeList.forEach(function(pElement) {
     })
 })
 
+//#6 'Dblclick' event listener
+
 // Update the inner text of main logo upon double click
 const mainLogo = document.querySelector('h1.logo-heading')
 mainLogo.addEventListener('dblclick', () => {
     mainLogo.innerText = 'DBL CLICKED'
 })
+
+//#7 'Scroll' event listener
 
 // Create Scroll Variable
 let lastScrollPosition = 0;
@@ -53,6 +65,9 @@ window.addEventListener('scroll', function(event) {
         letsGoSubtitle.style.color = 'black'
     }
 })
+
+//#8 'Resize' event listener
+
 // Add the 'resize' event handler to the window object
 window.addEventListener('resize', function(event) {
     // Loop though NodeList of p elements, and set their color to purple
@@ -61,13 +76,11 @@ window.addEventListener('resize', function(event) {
         })
 })
 
-// const h2NodeList = document.querySelectorAll('h2')
-// h2NodeList.forEach(function(h2Element) {
-//     h2Element.addEventListener("select", () => {
-//         window.alert("selected")
-//     })
-// })
+//#9 'Drag' event lister
 
-// const navA = document.querySelectorAll('nav-link')
-// console.log(destinationImage)
-// navA.focus(console.log(navA.innerText))
+let headerMain = document.querySelector('header.main-navigation')
+let firstNavLink =  document.querySelector('header.main-navigation .nav-link')
+
+headerMain.addEventListener("drag", function(event) {
+    firstNavLink.style.color = 'pink'
+})
