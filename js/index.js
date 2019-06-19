@@ -84,3 +84,12 @@ let firstNavLink =  document.querySelector('header.main-navigation .nav-link')
 headerMain.addEventListener("drag", function(event) {
     firstNavLink.style.color = 'pink'
 })
+
+//#10 'Cut' event listener
+
+// Loop through NodeList and added a cut event listener to each p element
+pNodeList.forEach(function(pElement) {
+    pElement.addEventListener('cut', () => {
+        pElement.style.transform = 'rotate(1.5deg)'
+    })
+})
