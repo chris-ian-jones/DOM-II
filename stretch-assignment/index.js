@@ -12,6 +12,10 @@ function moveTop() {
     
     currentStack = document.querySelector('.blocks')
     currentStack.insertBefore(newBlock, currentStack.childNodes[0])
+
+    newStack = document.querySelectorAll('.block')
+    newStack.forEach(block => block.addEventListener('click', moveTop))
+
 }
 
 
